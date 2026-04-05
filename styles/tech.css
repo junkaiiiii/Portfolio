@@ -1,0 +1,127 @@
+.tech-section {
+  padding-top: 6px;
+}
+
+.tech-groups {
+  display: grid;
+  gap: 22px;
+}
+
+.tech-category {
+  padding: 28px;
+  border: 1px solid var(--surface-border);
+  border-radius: 32px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
+}
+
+.tech-category-header {
+  margin-bottom: 20px;
+}
+
+.tech-category-title {
+  margin-bottom: 8px;
+  font-family: "Space Grotesk", Arial, sans-serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+}
+
+.tech-category-copy {
+  max-width: 56ch;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.tech-logo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  min-height: 168px;
+  padding: 24px 16px;
+  border: 1px solid var(--surface-border);
+  border-radius: 28px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
+  transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.tech-logo-container:hover {
+  transform: translateY(-4px);
+  border-color: rgba(184, 92, 56, 0.34);
+  background: rgba(255, 248, 239, 0.95);
+}
+
+.tech-logo {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+}
+
+.tech-text-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 22px;
+  background: #111111;
+  color: #ffffff;
+  font-family: "Space Grotesk", Arial, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.tech-text-logo-tailwind {
+  background: linear-gradient(135deg, #06b6d4, #38bdf8);
+}
+
+.tech-name {
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+.backend-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.database-grid {
+  grid-template-columns: repeat(1, minmax(0, 220px));
+}
+
+@media (max-width: 900px) {
+  .tech-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .backend-grid,
+  .database-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .tech-category {
+    padding: 22px 18px;
+  }
+
+  .tech-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .backend-grid,
+  .database-grid {
+    grid-template-columns: 1fr;
+  }
+}
